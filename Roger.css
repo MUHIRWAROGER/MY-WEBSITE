@@ -1,0 +1,79 @@
+h1{
+    color: brown;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 100px;
+    animation: fadeIn 5s ease-in-out;
+
+}
+input{
+    padding: 10px;
+    color: brown;
+    padding: 20px;
+    border: 1px;
+    border-radius: 6px;
+    background-color: rgba(0.5,0.5,0.5,0.5);
+    animation: fadeIn 5s ease-in-out;
+
+
+     
+}
+ 
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin:0px;
+    align-content : center;
+    background: linear-gradient(90deg, #ff0000, #737773, #0000ff, #ffff00, #ff00ff, #00ffff);
+    background-size: 600% 600%;
+    animation: moveBackground 28s linear infinite;
+
+
+}
+
+form{
+    width: 200px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 8px;
+    background: white;
+    background-color: rgba(0.5,0.5,0.5,0.5);
+    animation: fadeIn 5s ease-in-out;
+    height: 230px;
+
+}
+
+button{
+    background-color: rgba(75, 70, 70, 0.781);
+    animation: fadeIn 5s ease-in-out ;
+    padding: 17px;
+    border-radius: 16px;
+}
+
+
+.hover-link:hover .hover-button {
+    display: block;
+}
+
+
+@keyframes moveBackground {
+    0% { background-position: 50% 0%; }
+    100% { background-position:100% 50%; }
+    100% { background-position: 0% 50%; }
+
+
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.log{
+    align-content: center;
+}
+

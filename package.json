@@ -1,0 +1,13 @@
+{
+  "name": "MUHIRWA",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node regor.js",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.11"
+  }
+}

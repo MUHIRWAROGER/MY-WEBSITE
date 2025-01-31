@@ -1,0 +1,50 @@
+h1{
+    color: brown;
+    animation: fadeIn 10s ease-in-out;
+    font-size: 40px;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.829);
+    background-size: 600%,600%;
+    font-family: sans-serif;
+
+}
+
+.nav { 
+       overflow: hidden; 
+       display: flex; 
+       justify-content: space-around;
+       padding: 10px 0; 
+       height: 100px;
+       margin-top: 10px;
+       display:flexbox;
+ }
+ .nav a{
+    color: brown;
+    padding: 5px;
+    border-radius: 13px;
+       
+ }
+ 
+ .title{
+  font-family: sans-serif;
+  justify-items: center;
+  background-color: rgb(236, 102, 102);
+  
+
+ }
+
+ header{
+   
+    background-size: 700%,700%; 
+    height: 400px;
+ }
+
+ @keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+ }

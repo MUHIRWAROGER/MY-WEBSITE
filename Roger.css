@@ -4,6 +4,8 @@ h1{
     font-size: 28px;
     margin-top: 100px;
     animation: fadeIn 5s ease-in-out;
+    margin-left: 400px;
+
 
 }
 input{
@@ -24,7 +26,7 @@ body{
     display: flex;
     margin:0px;
     align-content : center;
-    background: linear-gradient(90deg, #ff0000, #737773, #0000ff, #ffff00, #ff00ff, #00ffff);
+    background: linear-gradient(360deg, #ff0000, #737773, #0000ff, #ffff00, #ff00ff, #00ffff);
     background-size: 600% 600%;
     animation: moveBackground 28s linear infinite;
 
@@ -40,6 +42,7 @@ form{
     background-color: rgba(0.5,0.5,0.5,0.5);
     animation: fadeIn 5s ease-in-out;
     height: 230px;
+    margin-left: 400px;
 
 }
 
@@ -75,5 +78,9 @@ button{
 
 .log{
     align-content: center;
+}
+
+.re{
+margin-left: 400px;
 }
 

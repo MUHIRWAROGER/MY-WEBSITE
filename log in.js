@@ -1,5 +1,6 @@
 // Fetch news data
-fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4716ad0586a420e8bb783d7e46d6fb5')
+fetch('http://localhost:3000/news')
+
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

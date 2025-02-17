@@ -1,5 +1,5 @@
 {
-  "name": "MUHIRWA",
+  "name": "muhirwa",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -8,6 +8,21 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
     "vite": "^6.0.11"
-  }
+  },
+  "main": "log in.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUHIRWAROGER/MY-WEBSITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MUHIRWAROGER/MY-WEBSITE/issues"
+  },
+  "homepage": "https://github.com/MUHIRWAROGER/MY-WEBSITE#readme",
+  "description": ""
 }

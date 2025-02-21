@@ -9,6 +9,7 @@ h1{
 
 }
 input{
+    font-size: 18px;
     padding: 10px;
     color: brown;
     padding: 20px;
@@ -28,25 +29,27 @@ body{
     align-content : center;
     background: linear-gradient(360deg, #ff0000, #737773, #0000ff, #ffff00, #ff00ff, #00ffff);
     background-size: 600% 600%;
-    animation: moveBackground 28s linear infinite;
+    animation: moveBackground 60s linear infinite;
 
 
 }
 
 form{
-    width: 200px;
+    width: 300px;
     padding: 30px;
     border: 1px solid;
-    border-radius: 8px;
+    border-radius: 12px;
     background: white;
     background-color: rgba(0.5,0.5,0.5,0.5);
     animation: fadeIn 5s ease-in-out;
-    height: 230px;
+    height: 260px;
     margin-left: 400px;
+    box-shadow: 20opx;
 
 }
 
 button{
+    font-size: 17px;
     background-color: rgba(75, 70, 70, 0.781);
     animation: fadeIn 5s ease-in-out ;
     padding: 17px;

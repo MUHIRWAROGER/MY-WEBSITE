@@ -1,19 +1,47 @@
-// Fetch news data
-fetch('http://localhost:3000/news')
+document.addEventListener("DOMContentLoaded", async function () {
+    const newsContainer = document.getElementById("news");
+    const newsTicker = document.getElementById("news-ticker");
 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    try {
+        const response = await fetch("http://localhost:3000/news");
+        const data = await response.json();
+
+        if (data.error) {
+            console.error("Backend error:", data.error);
+            newsContainer.innerHTML = `<h2>${data.error}</h2>`;
+            newsTicker.innerHTML = "No latest news available";
+            return;
         }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);  // Log the data to check the structure
-        const newsContainer = document.getElementById('news');
-        if (data.articles && data.articles.length) {
-            newsContainer.innerHTML = data.articles.map(article => `<p>${article.title}</p>`).join('');
-        } else {
-            newsContainer.innerHTML = '<p>No news articles found.</p>';
+
+        // ✅ Display images
+        newsContainer.innerHTML = "";
+        data.images.forEach((imgUrl) => {
+            const img = document.createElement("img");
+            img.src = imgUrl;
+            img.style.width = "300px";
+            img.style.margin = "10px";
+            newsContainer.appendChild(img);
+        });
+
+        // ✅ Fetch news headlines separately
+        const responseHeadlines = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=b4716ad0586a420e8bb783d7e46d6fb5`);
+        const newsData = await responseHeadlines.json();
+
+        if (!newsData.articles || newsData.articles.length === 0) {
+            newsTicker.innerHTML = "No latest news available";
+            return;
         }
-    })
-    .catch(error => console.log('Error fetching news:', error));
+
+        // ✅ Create scrolling news ticker content
+        let headlinesHTML = newsData.articles
+            .map(article => `<span style="margin-right: 50px;">${article.title}</span>`)
+            .join(""); // Space between items
+
+        newsTicker.innerHTML = headlinesHTML;
+
+    } catch (error) {
+        console.error("Fetch error:", error);
+        newsContainer.innerHTML = `<h2>Error fetching news</h2>`;
+        newsTicker.innerHTML = "Error fetching news";
+    }
+});
